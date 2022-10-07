@@ -1,0 +1,16 @@
+type Author {
+    id: ID!
+    name: String
+    age: Int
+}
+
+type Query {
+    findAllAuthors: [Author]
+   # author(id: ID!): Author
+}
+
+type Mutation {
+    createAuthor(name: String, age: Int): Author!
+    updateAuthor(id: ID!, name: String, age: Int): Author!
+    #deleteAuthor(id: ID!): Boolean
+}
